@@ -1,0 +1,740 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}
+
+#canvas{
+    width: 100%;
+    height: 100%;
+} */
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Montserrat",sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+.home{
+  background: linear-gradient(to left, rgba(0,0,0,0.5)90%,rgba(0,0,0,0.5)90%), url('https://image.slidesdocs.com/responsive-images/background/night-dark-galaxy-star-nature-black-powerpoint-background_8b7446a2b3__960_540.jpg'); 
+
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+body{
+    background:white;
+}
+/* #canvas{
+    pointer-events: none;
+} 
+
+
+header{
+    width: 100%;
+    height: 80px;
+    background:transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+.logo{
+    font-size: 28px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 10px gold;
+
+}
+.hamburger{
+    z-index: 1;
+    position: relative;
+}
+.nav-bar {
+    position: relative;
+    z-index: 1;
+}
+.nav-bar ul{
+    display: flex;
+}
+
+.nav-bar ul li a{
+    display: block;
+
+    padding: 10px 25px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #ffffff;
+    text-shadow: 0px 0px 10px gold;
+    transition: all 0.3s ease 0s;
+    margin: 0;
+}
+
+
+
+.nav-bar li a:hover{
+    color: beige;
+    text-shadow: 0px 0px 10px gold,0px 0px 20px gold,0px 0px 30px gold,0px 0px 40px gold,0px 0px 50px gold,0px 0px 60px gold,0px 0px 70px gold,0px 0px 80px gold,0px 0px 90px gold;
+}
+
+@media only screen and (max-width: 1320px) {
+    header{
+      
+      padding: 0 50px;
+    }
+  }
+@media only screen and (max-width: 1110px) {
+    header{
+      
+      padding: 0 50px;
+    }
+  }
+  
+  @media only screen and (max-width: 900px) {
+    
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    
+   }
+   .hamburger .line{
+    width: 30px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    margin: 6px 0;
+   }
+   .nav-bar{
+   
+    height: 0;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+   
+    backdrop-filter: blur(20px);
+    transition: 0.5s;
+    overflow: hidden;
+   }
+
+   .nav-bar.active{
+    height: 450px;
+   }
+   .nav-bar.active ul{
+    opacity: 1;
+   }
+   .nav-bar ul{
+
+    display: block;
+    width: fit-content;
+    margin: 80px auto 0 auto;
+    text-align: center;
+    transition:0.5s ;
+    opacity: 0;
+   }
+
+   .nav-bar ul li a{
+
+    margin-bottom: 12px;
+  
+   }
+   
+  }
+
+  .home-content{
+    padding-top: 15%;
+    padding-left: 45%;
+    color: aliceblue;
+    padding-bottom: 25%;
+
+  }
+
+
+
+
+.main{
+     border: 1px solid white; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+  }
+  .main-para p{
+      color:hsl(0, 2%, 90%);
+      z-index: 10;
+      text-align: center;
+      padding: 0 10%;
+      margin-bottom: 2%;
+      margin-top: 20px;
+      line-height: 30px;
+  }
+  .main h1{
+    position: relative;
+    width: 100%;
+    font-size: 50px;
+    font-family: 'Times New Roman';
+    letter-spacing: 2px;
+    color: #fff;
+    
+  }
+  .main h1{
+    
+    font-size: 50px;
+    font-family: 'Times New Roman';
+    letter-spacing: 2px;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    background: #262626 -webkit-gradient(linear,left top, right top, from(#262626),
+    to(#262626), color-stop(0.5, #0ef)) 0 0 no-repeat ;
+    -webkit-background-size:150px;
+    background-size: 150px;
+    color: rgba(255,255,255,0.1);
+    -webkit-background-clip: text;
+    animation: animate 20s infinite;
+    font-family: "Poppins",sans-serif;
+  
+  }
+  
+  @keyframes animate {
+      0%,10%{
+          background-position: -1000px;
+      }
+      20%{
+          background-position: top left;
+      }
+      90%{
+          background-position: top right;
+      }
+      100%{
+          background-position: 1000px ;
+      }
+      
+  }
+
+  .home-sci{
+    z-index: 1000;
+  }
+  .home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    z-index: 1000;
+  
+  }
+  
+  .home-sci a:hover {
+    background: #0ef;
+    color: #081b29;
+    box-shadow: 0 0 20px #0ef;
+    cursor: pointer;
+  }
+
+@media screen and (max-width: 768px){
+    .main{
+        overflow: hidden;
+    }
+    .main h1{
+        position: relative;
+        width: 100%;
+        font-size: 50px;
+        font-family: 'Times New Roman';
+        letter-spacing: 2px;
+        color: #fff;
+        
+      }
+      .main h1{
+          position: absolute;
+          top: 50%;
+          left: 65%;
+          transform: translate(-50%, -50%);
+          font-weight: bold;
+          background: #262626 -webkit-gradient(linear,left top, right top, from(#262626),
+          to(#262626), color-stop(0.5, #D4AF37)) 0 0 no-repeat ;
+          -webkit-background-size:150px;
+          background-size: 150px;
+          color: rgba(255,255,255,0.1);
+          -webkit-background-clip: text;
+          animation: animate 7s infinite;
+          font-family: "Poppins",sans-serif;
+      
+      }
+      
+      @keyframes animate {
+          0%,10%{
+              background-position: -1000px;
+          }
+          20%{
+              background-position: top left;
+          }
+          90%{
+              background-position: top right;
+          }
+          100%{
+              background-position: 1000px ;
+          }
+          
+      }
+  
+ 
+ 
+}
+
+
+@media screen and (max-width: 1100px){
+
+    .main{
+        align-items: center;
+        overflow: hidden;
+    }
+    .main h1{
+        position: relative;
+        width: 100%;
+        font-size: 30px;
+        font-family: 'Times New Roman';
+        letter-spacing: 2px;
+        color: #fff;
+        align-items: center;
+        
+      }
+      .main h1{
+          position: absolute;
+          top: 30%;
+          left: 55%;
+          transform: translate(-50%, -50%);
+          font-weight: bold;
+          background: #262626 -webkit-gradient(linear,left top, right top, from(#262626),
+          to(#262626), color-stop(0.5, #D4AF37)) 0 0 no-repeat ;
+          -webkit-background-size:150px;
+          background-size: 150px;
+          color: rgba(255,255,255,0.1);
+          -webkit-background-clip: text;
+          animation: animate 7s infinite;
+          font-family: "Poppins",sans-serif;
+      
+      }
+      
+      @keyframes animate {
+          0%,10%{
+              background-position: -1000px;
+          }
+          20%{
+              background-position: top left;
+          }
+          90%{
+              background-position: top right;
+          }
+          100%{
+              background-position: 1000px ;
+          }
+          
+      }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+ */
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+.home {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.5) 90%, rgba(0, 0, 0, 0.5) 90%), url('https://image.slidesdocs.com/responsive-images/background/night-dark-galaxy-star-nature-black-powerpoint-background_8b7446a2b3__960_540.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+body {
+    background: white;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 10px gold;
+}
+
+.hamburger {
+    z-index: 1;
+    position: relative;
+    display: none; /* Hidden by default, shown on mobile */
+}
+
+.nav-bar {
+    position: relative;
+    z-index: 1;
+}
+
+.nav-bar ul {
+    display: flex;
+}
+
+.nav-bar ul li a {
+    display: block;
+    padding: 10px 25px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #ffffff;
+    text-shadow: 0px 0px 10px gold;
+    transition: all 0.3s ease 0s;
+    margin: 0;
+}
+
+.nav-bar li a:hover {
+    color: beige;
+    text-shadow: 0px 0px 10px gold, 0px 0px 20px gold, 0px 0px 30px gold, 0px 0px 40px gold, 0px 0px 50px gold, 0px 0px 60px gold, 0px 0px 70px gold, 0px 0px 80px gold, 0px 0px 90px gold;
+}
+
+@media only screen and (max-width: 1320px) {
+    header {
+        padding: 0 50px;
+    }
+}
+
+@media only screen and (max-width: 1110px) {
+    header {
+        padding: 0 50px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    
+    .hamburger .line {
+        width: 30px;
+        height: 3px;
+        background-color: rgb(255, 255, 255);
+        margin: 6px 0;
+    }
+    
+    .nav-bar {
+        height: 0;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        backdrop-filter: blur(20px);
+        transition: 0.5s;
+        overflow: hidden;
+    }
+
+    .nav-bar.active {
+        height: 450px;
+    }
+    
+    .nav-bar.active ul {
+        opacity: 1;
+    }
+    
+    .nav-bar ul {
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+    }
+
+    .nav-bar ul li a {
+        margin-bottom: 12px;
+    }
+}
+
+.home-content {
+    padding-top: 10%;
+    padding-left: 10%;
+    padding-bottom: 10%;
+    color: aliceblue;
+}
+
+.main {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    padding: 0 20px; /* Added padding to prevent overflow */
+}
+
+.main-para p {
+    color: hsl(0, 2%, 90%);
+    z-index: 10;
+    text-align: center;
+    padding: 0 10%;
+    margin-bottom: 2%;
+    margin-top: 20px;
+    line-height: 30px;
+}
+
+.main h1 {
+    position: relative;
+    width: 100%;
+    font-size: 50px;
+    font-family: 'Times New Roman';
+    letter-spacing: 2px;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    background: #262626 -webkit-gradient(linear, left top, right top, from(#262626), to(#262626), color-stop(0.5, #0ef)) 0 0 no-repeat;
+    -webkit-background-size: 150px;
+    background-size: 150px;
+    color: rgba(255, 255, 255, 0.1);
+    -webkit-background-clip: text;
+    animation: animate 20s infinite;
+    font-family: "Poppins", sans-serif;
+}
+
+@keyframes animate {
+    0%, 10% {
+        background-position: -1000px;
+    }
+    20% {
+        background-position: top left;
+    }
+    90% {
+        background-position: top right;
+    }
+    100% {
+        background-position: 1000px;
+    }
+}
+
+.home-sci {
+    z-index: 1000;
+}
+
+.home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    z-index: 1000;
+}
+
+.home-sci a:hover {
+    background: #0ef;
+    color: #081b29;
+    box-shadow: 0 0 20px #0ef;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+        overflow: hidden;
+    }
+    
+    .main h1 {
+        font-size: 24px;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-size: 120px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .main {
+        align-items: center;
+        overflow: hidden;
+    }
+    
+    .main h1 {
+        font-size: 36px;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-size: 130px;
+    }
+    
+}
+
+/* 
+.floating-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0ef;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    animation: float 3s ease-in-out infinite;
+}
+
+.floating-btn:hover {
+    background-color: #081b29;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+} */
+
+/* Add this CSS for the floating button */
+/* Floating button styles */
+.floating-btn {
+    z-index: 100;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0ef; /* Base color */
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    animation: float 3s ease-in-out infinite;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    overflow: hidden; /* Ensure sparkles stay within button */
+}
+
+.floating-btn:hover {
+    background-color: #081b29;
+    transform: scale(1.1) rotate(10deg); /* Scale up and rotate slightly */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8); /* Increase shadow depth */
+}
+
+/* Keyframe animation for floating effect */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Sparkle stars */
+.sparkle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #fff;
+    opacity: 0;
+    animation: sparkle 1.5s infinite ease-in-out;
+}
+
+.sparkle:nth-child(1) {
+    top: 10%;
+    left: 20%;
+    animation-delay: 0.2s;
+}
+
+.sparkle:nth-child(2) {
+    top: 30%;
+    left: 80%;
+    animation-delay: 0.4s;
+}
+
+.sparkle:nth-child(3) {
+    top: 70%;
+    left: 40%;
+    animation-delay: 0.6s;
+}
+
+.sparkle:nth-child(4) {
+    top: 50%;
+    left: 90%;
+    animation-delay: 0.8s;
+}
+
+.sparkle:nth-child(5) {
+    top: 20%;
+    left: 60%;
+    animation-delay: 1s;
+}
+
+/* Sparkle animation */
+@keyframes sparkle {
+    0%, 100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

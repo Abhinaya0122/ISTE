@@ -1,0 +1,209 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+
+#canvas{
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+body{
+    background-color: #000000;
+   
+}
+
+.heading{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.heading h1{
+    font-size: 50px;
+    color: #000000;
+    margin-bottom: 70px;
+    position: relative;
+    -webkit-box-reflect:below 1px linear-gradient(transparent, #0008) ;
+    
+    text-shadow: 1px 2px 3px #D4AF37;
+    -webkit-text-stroke-width: 0.2px;
+  -webkit-text-stroke-color: #D4AF37;
+}
+
+.heading h1::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    display: block;
+    margin: 0 auto;
+    background-color: #e5d304;
+}
+
+.heading p{
+    font-size: 18px;
+    font-weight: 200;
+    color:  rgb(253, 245, 218);
+    margin-bottom: 35px;
+    font-family: "Poppins",sans-serif;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.about{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-image{
+    box-shadow: 4px 5px 3px #D4AF37;
+    border: 1px solid black;
+    max-width: 100%;
+    flex: 1;
+    margin-right: 40px;
+    overflow: hidden;
+    border-radius: 20px;
+   
+}
+
+.about-image img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+
+    transition: 0.5s ease;
+    
+}
+
+.about-content{
+    flex: 1;
+}
+
+.about-image:hover img{
+    transform: scale(1.2);
+}
+
+.about-content h2{
+    font-size: 27px;
+   
+    color: #000000;
+    margin-bottom: 20px;
+    position: relative;
+    /* -webkit-box-reflect:below 1px linear-gradient(transparent, #0008) ; */
+    
+    text-shadow: 1px 1px 2px #D4AF37;
+    -webkit-text-stroke-width: 0.2px;
+  -webkit-text-stroke-color: #D4AF37;
+}
+
+.about-content p{
+    font-size: 16px;
+    line-height: 2;
+    color:  rgb(253, 245, 218);
+    font-weight: 200;
+}
+footer {
+    margin-top: 15px;
+    background-color: #000000; /* dark gray background */
+    color: #fff; /* white text color */
+    padding: 10px; /* add some padding */
+    text-align: center; /* center the text */
+    clear: both; /* clear any floats */
+    position: relative; /* make it relative so we can use absolute positioning for the copyright text */
+  }
+  
+  footer p {
+    margin: 0; /* remove any margin */
+    font-size: 14px; /* smaller font size */
+  }
+  
+  footer p::before {
+    content: "\00A9"; /* copyright symbol */
+    margin-right: 5px; /* add some space between the symbol and the text */
+  }
+@media screen and (max-width: 768px ) {
+    .heading{
+        padding: 0px 20px;
+    }
+    .heading h1{
+        font-size: 36px;
+    }
+    .heading p{
+        font-size: 17px;
+        margin-bottom: 0px;
+    }
+    .container{
+        padding: 0px;
+    }
+    .about{
+        padding: 20px;
+        flex-direction: column;
+    }
+    .about-image{
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+    .about-content p{
+        padding: 0px;
+        font-size: 16px;
+    }
+    
+}
+
+
+
+/* amimations */
+.heading {
+    animation: fadeIn 2s;
+}
+.about-image {
+    animation: zoomIn 2s;
+}
+.about-content {
+    animation: fadeIn 2s;
+}
+footer {
+    animation: slideIn 2s;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes slideIn {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
