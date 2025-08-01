@@ -1,6 +1,32 @@
 from flask import Flask, render_template, request, redirect, jsonify, send_from_directory, url_for
 from urllib.parse import quote as url_quote
+from datetime import datetime
+from flask import Response
 app = Flask(__name__)
+
+@app.route('/sitemap.xml', methods=['GET'])
+def sitemap():
+    pages = [
+        {'loc': '/', 'lastmod': datetime.now().date()},
+        {'loc': '/about', 'lastmod': datetime.now().date()},
+        {'loc': '/team', 'lastmod': datetime.now().date()},
+        {'loc': '/event', 'lastmod': datetime.now().date()},
+        {'loc': '/contact', 'lastmod': datetime.now().date()},
+    ]
+
+    sitemap_xml = ['<?xml version="1.0" encoding="UTF-8"?>',
+                   '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+
+    for page in pages:
+        sitemap_xml.append(f"""<url>
+  <loc>https://kec-iste.vercel.app{page['loc']}</loc>
+  <lastmod>{page['lastmod']}</lastmod>
+</url>""")
+
+    sitemap_xml.append('</urlset>')
+
+    return Response('\n'.join(sitemap_xml), mimetype='application/xml')
+
 
 @app.route('/')
 def index():
