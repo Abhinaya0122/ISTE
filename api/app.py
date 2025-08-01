@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, jsonify, send_from_directory, url_for
+from flask import Flask, make_response, render_template, request, redirect, jsonify, send_from_directory, url_for
 from urllib.parse import quote as url_quote
 from datetime import datetime
 from flask import Response
@@ -24,8 +24,9 @@ def sitemap():
 </url>""")
 
     sitemap_xml.append('</urlset>')
-
-    return Response('\n'.join(sitemap_xml), mimetype='application/xml')
+    response = make_response('\n'.join(sitemap_xml))
+    response.headers["Content-Type"] = "application/xml"
+    return response
 
 
 @app.route('/')
