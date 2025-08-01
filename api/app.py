@@ -32,6 +32,11 @@ def contact():
 def google_verification():
     return send_from_directory('static', 'googlee11137f78e34b468.html')
 
+@app.route('/robots.txt')
+def robots():
+    return send_from_directory('static', 'robots.txt')
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
